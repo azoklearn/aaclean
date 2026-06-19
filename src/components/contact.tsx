@@ -26,7 +26,7 @@ export function Contact() {
           <Reveal delay={2}>
             <p className="mt-6 max-w-xl text-pretty text-lg text-fg-dim">
               Réservation par téléphone ou e-mail. Dites-nous votre véhicule et
-              votre besoin, on s&apos;occupe du reste — chez vous, dans le 54, 57
+              votre besoin, on s&apos;occupe du reste. Chez vous, dans le 54, 57
               et 88.
             </p>
           </Reveal>

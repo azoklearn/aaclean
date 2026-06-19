@@ -116,7 +116,7 @@ export function Realizations() {
         </motion.div>
 
         <p className="mt-6 text-sm text-fg-dim">
-          Photos réelles de nos réalisations — ajoutez vos nouvelles photos dans{" "}
+          Photos réelles de nos réalisations. Ajoutez vos nouvelles photos dans{" "}
           <code className="rounded bg-surface-2 px-1 py-0.5 text-xs">public/</code>{" "}
           et référencez-les dans <code className="rounded bg-surface-2 px-1 py-0.5 text-xs">src/lib/site.ts</code>.
         </p>

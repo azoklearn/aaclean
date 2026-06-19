@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default:
-      "A&A Clean Signature — Detailing & traitement céramique à Nancy (54, 57, 88)",
+      "A&A Clean Signature : Detailing & traitement céramique à Nancy (54, 57, 88)",
     template: "%s · A&A Clean Signature",
   },
   description:
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    title: "A&A Clean Signature — Une nouvelle vie pour votre voiture",
+    title: "A&A Clean Signature : Une nouvelle vie pour votre voiture",
     description:
       "Detailing premium à domicile : nettoyage, polissage et traitement céramique dans le 54, 57 et 88.",
     siteName: site.name,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "A&A Clean Signature",
     description:
-      "Detailing premium à domicile dans le 54, 57 et 88 — nettoyage, polissage, céramique.",
+      "Detailing premium à domicile dans le 54, 57 et 88 : nettoyage, polissage, céramique.",
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },

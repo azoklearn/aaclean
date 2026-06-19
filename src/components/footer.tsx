@@ -55,7 +55,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="pt-1 text-sm text-fg-dim">
-                Intervention à domicile — Nancy, Meurthe-et-Moselle (54), Moselle
+                Intervention à domicile : Nancy, Meurthe-et-Moselle (54), Moselle
                 (57), Vosges (88).
               </li>
             </ul>

@@ -124,8 +124,7 @@ export function BeforeAfter() {
 
       <Reveal delay={2}>
         <p className="mt-4 text-center text-sm text-fg-dim">
-          Visuel de démonstration — vos véritables photos avant / après prennent
-          place ici.
+          Vos véritables photos avant / après prennent place ici.
         </p>
       </Reveal>
     </section>

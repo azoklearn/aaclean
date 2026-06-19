@@ -195,14 +195,14 @@ export type Work = {
 };
 
 export const works: Work[] = [
-  { id: "w1", title: "Mercedes AMG — nettoyage intérieur complet", category: "Intérieur", hue: 12, photo: "/apres1.jpg" },
-  { id: "w2", title: "Mercedes AMG — état avant intervention", category: "Intérieur", hue: 28, photo: "/avant1.jpg" },
-  { id: "w3", title: "Citroën C3 — après nettoyage complet", category: "Intérieur", hue: 210, photo: "/apres2.jpg" },
-  { id: "w4", title: "Citroën C3 — état avant intervention", category: "Intérieur", hue: 200, photo: "/avant2.jpg" },
-  { id: "w5", title: "Utilitaire — flotte professionnelle", category: "Professionnel", hue: 18 },
-  { id: "w6", title: "Coupé — finition miroir", category: "Polissage", hue: 0 },
-  { id: "w7", title: "Familiale — assainissement habitacle", category: "Intérieur", hue: 35 },
-  { id: "w8", title: "Berline premium — pack céramique", category: "Céramique", hue: 205 },
+  { id: "w1", title: "Mercedes AMG nettoyage intérieur complet", category: "Intérieur", hue: 12, photo: "/apres1.jpg" },
+  { id: "w2", title: "Mercedes AMG état avant intervention", category: "Intérieur", hue: 28, photo: "/avant1.jpg" },
+  { id: "w3", title: "Citroën C3 après nettoyage complet", category: "Intérieur", hue: 210, photo: "/apres2.jpg" },
+  { id: "w4", title: "Citroën C3 état avant intervention", category: "Intérieur", hue: 200, photo: "/avant2.jpg" },
+  { id: "w5", title: "Utilitaire flotte professionnelle", category: "Professionnel", hue: 18 },
+  { id: "w6", title: "Coupé finition miroir", category: "Polissage", hue: 0 },
+  { id: "w7", title: "Familiale assainissement habitacle", category: "Intérieur", hue: 35 },
+  { id: "w8", title: "Berline premium pack céramique", category: "Céramique", hue: 205 },
 ];
 
 /**
@@ -215,21 +215,21 @@ export const testimonials = [
     name: "Client à remplacer",
     place: "Nancy (54)",
     rating: 5,
-    text: "Exemple de témoignage — remplacez ce texte par un avis client réel. Décrivez l'état initial du véhicule et le résultat obtenu.",
+    text: "Remplacez ce texte par un avis client réel. Décrivez l'état initial du véhicule et le résultat obtenu.",
     service: "Traitement céramique",
   },
   {
     name: "Client à remplacer",
     place: "Metz (57)",
     rating: 5,
-    text: "Exemple de témoignage — remplacez ce texte par un avis client réel. Mentionnez l'intervention à domicile et la qualité de la finition.",
+    text: "Remplacez ce texte par un avis client réel. Mentionnez l'intervention à domicile et la qualité de la finition.",
     service: "Nettoyage intérieur",
   },
   {
     name: "Client à remplacer",
     place: "Épinal (88)",
     rating: 5,
-    text: "Exemple de témoignage — remplacez ce texte par un avis client réel. Soulignez le sérieux, la ponctualité et le résultat premium.",
+    text: "Remplacez ce texte par un avis client réel. Soulignez le sérieux, la ponctualité et le résultat premium.",
     service: "Polissage",
   },
 ];

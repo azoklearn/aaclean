@@ -69,7 +69,7 @@ export function Testimonials() {
 
       <Reveal>
         <p className="mt-8 text-center text-sm text-fg-dim">
-          Emplacement prêt pour vos avis clients réels — remplacez ces exemples
+          Emplacement prêt pour vos avis clients réels : remplacez ces exemples
           par de vrais témoignages (Google, etc.) avant la mise en ligne.
         </p>
       </Reveal>

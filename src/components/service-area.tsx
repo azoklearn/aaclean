@@ -199,7 +199,7 @@ export function ServiceArea() {
                   <span className="font-medium">
                     {current.name} ({current.code})
                   </span>{" "}
-                  <span className="text-fg-dim">— {current.cities}</span>
+                  <span className="text-fg-dim">{current.cities}</span>
                 </p>
               ) : (
                 <p className="text-sm text-fg-dim">
