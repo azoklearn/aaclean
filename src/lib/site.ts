@@ -65,9 +65,9 @@ export const services: Service[] = [
     benefits:
       "Élimination des poussières, taches, odeurs et bactéries. Sièges, plastiques, moquettes et plafonnier traités en profondeur.",
     process:
-      "Aspiration complète, injection-extraction des tissus, nettoyage vapeur, soin des cuirs et finition des plastiques.",
+      "Aspiration complète, injection et extraction des tissus, nettoyage vapeur, soin des cuirs et finition des plastiques.",
     result: "Un intérieur assaini, matité d'origine retrouvée, odeur fraîche.",
-    duration: "2 – 4 h",
+    duration: "2 à 4 h",
   },
   {
     id: "exterieur",
@@ -79,19 +79,19 @@ export const services: Service[] = [
     process:
       "Prélavage mousse active, lavage deux seaux, décontamination chimique et clay bar, séchage premium.",
     result: "Une carrosserie nette, douce au toucher, prête à protéger.",
-    duration: "1 h 30 – 3 h",
+    duration: "1h30 à 3 h",
   },
   {
     id: "polissage",
     index: "03",
     title: "Polissage",
-    tagline: "La correction qui efface micro-rayures et tourbillons.",
+    tagline: "La correction qui efface les microratures et tourbillons.",
     benefits:
-      "Suppression des micro-rayures, hologrammes et marques de lavage. La profondeur et la brillance reviennent.",
+      "Suppression des microratures, hologrammes et marques de lavage. La profondeur et la brillance reviennent.",
     process:
       "Mesure d'épaisseur du vernis, polissage machine en plusieurs passes, contrôle sous lampe.",
     result: "Une peinture redressée, miroir, sans défaut visible.",
-    duration: "4 – 8 h",
+    duration: "4 à 8 h",
   },
   {
     id: "ceramique",
@@ -99,11 +99,11 @@ export const services: Service[] = [
     title: "Traitement céramique",
     tagline: "Une protection durable et un effet hydrophobe extrême.",
     benefits:
-      "Bouclier contre UV, salissures et micro-agressions. Brillance intense et entretien facilité pendant des années.",
+      "Bouclier contre UV, salissures et microagressions. Brillance intense et entretien facilité pendant des années.",
     process:
       "Préparation et dégraissage de la surface, application du revêtement céramique, temps de prise contrôlé.",
     result: "Un effet perlant durable et une teinte profonde, longue durée.",
-    duration: "1 – 2 jours",
+    duration: "1 à 2 jours",
   },
   {
     id: "lustrage",
@@ -113,9 +113,9 @@ export const services: Service[] = [
     benefits:
       "Ravive la couleur et apporte une brillance maîtrisée, idéal avant une vente ou un événement.",
     process:
-      "Nettoyage de surface, application d'un lustrant de finition, micro-finition à la main.",
+      "Nettoyage de surface, application d'un lustrant de finition, microfinition à la main.",
     result: "Une finition lumineuse, nette et homogène.",
-    duration: "1 – 2 h",
+    duration: "1 à 2 h",
   },
   {
     id: "protection",
@@ -127,7 +127,7 @@ export const services: Service[] = [
     process:
       "Diagnostic, application de protections adaptées (cire, scellant ou céramique selon besoin), conseils d'entretien.",
     result: "Un véhicule protégé, plus facile à laver, plus longtemps beau.",
-    duration: "demi-journée",
+    duration: "demi journée",
   },
 ];
 
@@ -162,7 +162,7 @@ export const processSteps = [
   {
     n: "01",
     title: "Prise de contact",
-    text: "Par téléphone ou e-mail. On comprend votre besoin et votre véhicule.",
+    text: "Par téléphone ou email. On comprend votre besoin et votre véhicule.",
   },
   {
     n: "02",

@@ -40,7 +40,7 @@ export function Realizations() {
             title={
               <>
                 Le résultat parle
-                <br /> de lui-même.
+                <br /> de lui même.
               </>
             }
           />
