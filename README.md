@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# A&A Clean Signature — site vitrine
 
-## Getting Started
+Site premium de detailing automobile (nettoyage, polissage, traitement
+céramique, protection) avec intervention à domicile dans le **54 / 57 / 88**.
 
-First, run the development server:
+Stack : **Next.js 16 (App Router)** · TypeScript · Tailwind CSS v4 ·
+Framer Motion · GSAP · Lenis (smooth scroll) · lucide-react.
+Polices : **Clash Display** (titres) + **Satoshi** (texte) via Fontshare.
+
+## Démarrer
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # build de production
+npm start        # sert le build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Modifier le contenu
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Tout le texte éditable est centralisé dans **`src/lib/site.ts`** :
+coordonnées, prestations, étapes de la méthode, avis, réalisations, zone.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Élément | Fichier |
+| --- | --- |
+| Téléphone / e-mail / zone | `src/lib/site.ts` → `site` |
+| Prestations (bénéfices, déroulé, résultat, durée) | `site.ts` → `services` |
+| Méthode (5 étapes) | `site.ts` → `processSteps` |
+| Réalisations (galerie) | `site.ts` → `works` |
+| Avis clients | `site.ts` → `testimonials` |
+| SEO / métadonnées | `src/app/layout.tsx` |
 
-## Learn More
+## ⚠️ À remplacer avant la mise en ligne
 
-To learn more about Next.js, take a look at the following resources:
+Le site est livré avec des **visuels de démonstration** (surfaces de peinture
+générées en CSS, volontairement abstraites — aucune voiture stock/IA) et des
+**avis exemples**. À remplacer par les vrais contenus du client :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Photos réelles** — hero, avant/après, galerie de réalisations.
+   Déposez les images dans `public/` et remplacez le composant
+   `<PaintSurface … />` par `<Image … />` (l'optimisation next/image est prête ;
+   les hôtes distants se déclarent dans `next.config.ts`).
+2. **Avis clients réels** — remplacer les entrées « Client à remplacer » dans
+   `testimonials` (`site.ts`). Ne pas inventer d'avis.
+3. **Mentions légales / CGV** si nécessaire.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Notes techniques
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Les animations d'apparition (`Reveal`) reposent sur des transitions CSS +
+  IntersectionObserver, avec repli temporisé : le contenu reste visible même si
+  le JS est lent ou l'onglet en arrière-plan.
+- `prefers-reduced-motion` est respecté (animations désactivées).
+- Données structurées `AutoDetailing` (schema.org) injectées dans le layout.
