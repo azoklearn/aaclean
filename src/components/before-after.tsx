@@ -1,8 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { MoveHorizontal } from "lucide-react";
-import { PaintSurface } from "./ui/paint-surface";
 import { SectionHead } from "./ui/section-head";
 import { Reveal } from "./ui/reveal";
 
@@ -67,22 +67,34 @@ export function BeforeAfter() {
           }}
         >
           {/* AFTER (full) */}
-          <PaintSurface variant="after" hue={210} className="absolute inset-0">
-            <span className="absolute bottom-5 right-5 rounded-full border border-white/20 bg-black/40 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+          <div className="absolute inset-0">
+            <Image
+              src="/apres1.jpg"
+              alt="Intérieur Mercedes AMG après nettoyage"
+              fill
+              className="object-cover object-bottom"
+              sizes="(max-width: 1280px) 100vw, 1240px"
+            />
+            <span className="absolute bottom-5 right-5 z-10 rounded-full border border-white/20 bg-black/40 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
               Après
             </span>
-          </PaintSurface>
+          </div>
 
           {/* BEFORE (clipped) */}
           <div
             className="absolute inset-0"
             style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
           >
-            <PaintSurface variant="before" hue={210} className="absolute inset-0">
-              <span className="absolute bottom-5 left-5 rounded-full border border-white/15 bg-black/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-fg-dim backdrop-blur-sm">
-                Avant
-              </span>
-            </PaintSurface>
+            <Image
+              src="/avant1.jpg"
+              alt="Intérieur Mercedes AMG avant nettoyage"
+              fill
+              className="object-cover object-bottom"
+              sizes="(max-width: 1280px) 100vw, 1240px"
+            />
+            <span className="absolute bottom-5 left-5 z-10 rounded-full border border-white/15 bg-black/50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+              Avant
+            </span>
           </div>
 
           {/* divider + handle */}

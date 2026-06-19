@@ -190,14 +190,15 @@ export type Work = {
   id: string;
   title: string;
   category: "Intérieur" | "Extérieur" | "Polissage" | "Céramique" | "Professionnel";
-  hue: number; // base hue used by the designed placeholder
+  hue: number;
+  photo?: string; // real photo path; replaces PaintSurface when set
 };
 
 export const works: Work[] = [
-  { id: "w1", title: "Berline — rénovation extérieure", category: "Extérieur", hue: 12 },
-  { id: "w2", title: "SUV — détailing intérieur complet", category: "Intérieur", hue: 28 },
-  { id: "w3", title: "Citadine — correction & polissage", category: "Polissage", hue: 210 },
-  { id: "w4", title: "Break — protection céramique 9 ans", category: "Céramique", hue: 200 },
+  { id: "w1", title: "Mercedes AMG — nettoyage intérieur complet", category: "Intérieur", hue: 12, photo: "/apres1.jpg" },
+  { id: "w2", title: "Mercedes AMG — état avant intervention", category: "Intérieur", hue: 28, photo: "/avant1.jpg" },
+  { id: "w3", title: "Citroën C3 — après nettoyage complet", category: "Intérieur", hue: 210, photo: "/apres2.jpg" },
+  { id: "w4", title: "Citroën C3 — état avant intervention", category: "Intérieur", hue: 200, photo: "/avant2.jpg" },
   { id: "w5", title: "Utilitaire — flotte professionnelle", category: "Professionnel", hue: 18 },
   { id: "w6", title: "Coupé — finition miroir", category: "Polissage", hue: 0 },
   { id: "w7", title: "Familiale — assainissement habitacle", category: "Intérieur", hue: 35 },

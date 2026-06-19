@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
@@ -12,18 +13,17 @@ function Wordmark({ onClick }: { onClick?: () => void }) {
     <Link
       href="#top"
       onClick={onClick}
-      className="ring-focus group flex items-center gap-2.5"
+      className="ring-focus"
       aria-label={`${site.name} — accueil`}
     >
-      <span className="grid size-9 place-items-center rounded-md bg-orange font-display text-[0.95rem] font-semibold leading-none text-white">
-        A
-      </span>
-      <span className="font-display text-[1.02rem] font-semibold leading-none tracking-tight text-fg">
-        A&amp;A{" "}
-        <span className="font-body text-[0.7rem] font-medium uppercase tracking-[0.28em] text-fg-dim">
-          Clean Signature
-        </span>
-      </span>
+      <Image
+        src="/logo.png"
+        alt={site.name}
+        width={48}
+        height={48}
+        className="h-12 w-12 object-contain"
+        priority
+      />
     </Link>
   );
 }

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail } from "lucide-react";
 import { nav, site } from "@/lib/site";
@@ -9,18 +10,8 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-12">
           {/* brand */}
           <div className="md:col-span-5">
-            <div className="flex items-center gap-2.5">
-              <span className="grid size-9 place-items-center rounded-md bg-orange font-display text-[0.95rem] font-semibold text-white">
-                A
-              </span>
-              <span className="font-display text-lg font-semibold tracking-tight text-fg">
-                A&amp;A{" "}
-                <span className="font-body text-[0.7rem] font-medium uppercase tracking-[0.28em] text-fg-dim">
-                  Clean Signature
-                </span>
-              </span>
-            </div>
-            <p className="mt-5 max-w-sm text-[1.05rem] font-medium leading-snug text-fg">
+            <Image src="/logo.png" alt={site.name} width={64} height={64} className="h-16 w-16 object-contain" />
+            <p className="mt-4 max-w-sm text-[1.05rem] font-medium leading-snug text-fg">
               {site.slogan}
             </p>
             <p className="mt-1 text-sm text-fg-dim">{site.baseline}</p>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { works, type Work } from "@/lib/site";
@@ -80,11 +81,21 @@ export function Realizations() {
                   tall.has(i) ? "row-span-2" : "row-span-1",
                 )}
               >
-                <PaintSurface
-                  variant="after"
-                  hue={w.hue}
-                  className="h-full w-full transition-transform duration-700 group-hover:scale-105"
-                />
+                {w.photo ? (
+                  <Image
+                    src={w.photo}
+                    alt={w.title}
+                    fill
+                    className="object-cover object-bottom transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 400px"
+                  />
+                ) : (
+                  <PaintSurface
+                    variant="after"
+                    hue={w.hue}
+                    className="h-full w-full transition-transform duration-700 group-hover:scale-105"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
                 <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-5">
                   <div>
@@ -105,8 +116,9 @@ export function Realizations() {
         </motion.div>
 
         <p className="mt-6 text-sm text-fg-dim">
-          Visuels de démonstration — votre portfolio de réalisations réelles
-          s&apos;affiche ici.
+          Photos réelles de nos réalisations — ajoutez vos nouvelles photos dans{" "}
+          <code className="rounded bg-surface-2 px-1 py-0.5 text-xs">public/</code>{" "}
+          et référencez-les dans <code className="rounded bg-surface-2 px-1 py-0.5 text-xs">src/lib/site.ts</code>.
         </p>
       </div>
     </section>

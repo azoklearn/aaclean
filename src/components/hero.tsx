@@ -1,10 +1,10 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight, Check, MoveDown } from "lucide-react";
-import { PaintSurface } from "./ui/paint-surface";
 import { trustBadges } from "@/lib/site";
 
 export function Hero() {
@@ -22,9 +22,15 @@ export function Hero() {
       ref={ref}
       className="relative flex min-h-[100svh] items-end overflow-hidden"
     >
-      {/* full-bleed studio backdrop (replace with real hero photography) */}
+      {/* full-bleed hero photo — clean Mercedes AMG interior */}
       <motion.div style={{ y: bgY }} className="absolute inset-0 -z-10 scale-110">
-        <PaintSurface variant="after" hue={210} className="h-full w-full" />
+        <Image
+          src="/apres1.jpg"
+          alt="Intérieur Mercedes-Benz AMG après nettoyage complet"
+          fill
+          className="object-cover object-center"
+          priority
+        />
       </motion.div>
 
       {/* legibility + atmosphere overlays */}
